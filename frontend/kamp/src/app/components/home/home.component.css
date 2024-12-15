@@ -1,0 +1,59 @@
+/* Sayfa genelinde ortalamayı sağlamak için */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+  }
+  
+  /* Profil kutusu düzeni */
+  .profile-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölgelendirme */
+    text-align: center;
+    width: 70vw; /* Genişlik %70 görünüm genişliği */
+    height: 70vh; /* Yükseklik %70 görünüm yüksekliği */
+    border: 2px solid #ccc; /* Kenarlık */
+    padding: 20px;
+  }
+  
+  /* Başlık düzeni */
+  .profile-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Puan yazısı */
+  .profile-box p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  /* Butonlar için düzen */
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Butonlar arasında mesafe */
+  }
+  
+  /* Buton stilleri */
+  .apply-button, .later-button {
+    font-size: 16px;
+    padding: 12px 20px;
+    width: 100%; /* Butonlar genişliği 100% */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-button:hover {
+    background-color: #45a049; /* Hover efekti */
+  }
+  
+  .later-button:hover {
+    background-color: #007bb5; /* Hover efekti */
+  }
+  

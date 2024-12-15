@@ -1,0 +1,29 @@
+<body>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="login-container p-4 p-md-5 shadow-lg rounded">
+      <h2 class="text-center mb-4">Giriş Yap</h2>
+      <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+        <div class="form-group">
+          <label for="email" class="form-label">E-posta</label>
+          <input type="email" id="email" name="email" ngModel class="form-control" placeholder="E-posta adresinizi girin" required />
+        </div>
+        <div class="form-group mt-3">
+          <label for="password" class="form-label">Şifre</label>
+          <input type="password" id="password" name="password" ngModel class="form-control" placeholder="Şifrenizi girin" required />
+        </div>
+        <div class="form-group mt-3">
+          <label for="captcha">{{num1}} + {{num2}} İşemin sonucu kaçtır ?</label>
+          <input type="number" id="captcha"  class="form-control"  [(ngModel)]="captchaAnswer" name="captchaAnswer" required />
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-4">
+          
+          <a href="#" class="forgot-password">Şifremi unuttum?</a>
+        </div>
+        <button type="submit" class="btn btn-primary w-100 mt-4">Giriş Yap</button>
+      </form>
+      <div class="mt-4 text-center">
+        <p>Henüz üye değil misiniz? <a href="#" class="sign-up-link">Kayıt Olun</a></p>
+      </div>
+    </div>
+  </div>
+  </body>

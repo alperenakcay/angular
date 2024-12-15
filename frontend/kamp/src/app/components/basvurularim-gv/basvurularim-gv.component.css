@@ -1,0 +1,47 @@
+.table-container {
+  margin: 20px;
+}
+
+.simple-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.simple-table th, .simple-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.simple-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.simple-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.simple-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.edit-btn {
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  color: white;
+  background-color: #f44336;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+  opacity: 0.8;
+}

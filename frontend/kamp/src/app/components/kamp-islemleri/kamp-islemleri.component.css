@@ -1,0 +1,151 @@
+.form-card {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.submit-button {
+  text-align: right;
+}
+
+.table-container {
+  margin: 20px;
+}
+
+.simple-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.simple-table th, .simple-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.simple-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.simple-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.simple-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.edit-btn {
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  color: white;
+  background-color: #f44336;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+  opacity: 0.8;
+}
+/* Temel Ayarlar */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Form Kartı */
+mat-card.form-card {
+  width: 80%;
+  max-width: 600px;  /* Maksimum genişlik */
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Container */
+.kamp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Alanları */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+/* Checkbox */
+mat-checkbox {
+  margin-top: 10px;
+}
+
+/* Submit Button */
+.submit-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-button button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.submit-button button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.submit-button button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Mobil Uyumlu */
+@media (max-width: 768px) {
+  mat-card.form-card {
+    width: 95%;  /* Ekran boyutuna göre formu %95 yapar */
+    padding: 15px;
+  }
+
+  .kamp-form {
+    gap: 15px;
+  }
+
+  .form-group {
+    gap: 8px;
+  }
+
+  .submit-button button {
+    width: 100%;  /* Mobilde butonun tamamını kaplamasını sağlar */
+    padding: 12px;
+  }
+}

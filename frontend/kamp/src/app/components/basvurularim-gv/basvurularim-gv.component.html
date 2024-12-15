@@ -1,0 +1,36 @@
+<h2>Başvurular</h2>
+<hr>
+@if (basvurular.length > 0) {
+<div>
+  <ul>  
+    <div class="table-container">
+      <table class="simple-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>KAMP</th>
+            <th>Pozisyon</th>
+            <th>İşlemler</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of basvurular; track $index) {
+            <tr>
+            <td>{{ item.donem_id}}</td>
+            <td>{{getKampAdiById(item.kamp_id)}}</td>
+            <td>{{ item.iptalmi }}</td>
+            <td>{{item.pers_key}}</td>
+          </tr>
+        }
+        </tbody>
+      </table>
+    </div>
+  </ul>
+</div>
+}@if (basvurular.length === 0) {
+<div>
+  <p>Henüz başvuru bulunmamaktadır.</p>
+</div>
+}
+
+

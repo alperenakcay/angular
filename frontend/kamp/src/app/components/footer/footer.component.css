@@ -1,0 +1,33 @@
+.footer {
+  background-color: #003f7d; /* Koyu mavi */
+  color: #ffffff; /* Beyaz metin */
+}
+
+.footer a {
+  color: #334f70; /* Açık mavi link */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+  color: 002a5c; /* Daha açık mavi hover */
+}
+
+.footer-copyright {
+  background-color: #002a5c; /* Daha koyu mavi ton */
+  color: white;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

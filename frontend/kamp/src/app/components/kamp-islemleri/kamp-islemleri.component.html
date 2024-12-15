@@ -1,0 +1,86 @@
+<mat-card class="form-card">
+  <h3>Kamp Ekle</h3>
+  <hr>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form" class="kamp-form">
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>ID</mat-label>
+        <input matInput formControlName="id" type="number" required>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Adı</mat-label>
+        <input matInput formControlName="name" required>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Kodu</mat-label>
+        <input matInput formControlName="code" type="number" required>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-checkbox formControlName="isActive">Aktif mi?</mat-checkbox>
+    </div>
+
+    <div class="form-group submit-button">
+      <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Ekle</button>
+    </div>
+  </form>
+</mat-card>
+
+
+<h2>Kamp Listesi</h2>
+<hr>
+@if (kampListesi.length > 0) {
+<div>
+  <ul>  
+    <div class="table-container">
+      <table class="simple-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>ADI</th>
+            <th>KODU</th>
+            <th>AKTİF Mİ</th>
+            <th>İŞLEMLER</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of kampListesi; track $index) {
+            <tr>
+            <td>{{ item.ID}}</td>
+            <td>{{ item.ADI }}</td>
+            <td>{{item.KODU}}</td>
+              @if(item.AKTIFMI === 1){
+                <td>Aktif</td>
+              }
+              @else{
+                <td>Pasif</td>
+              }
+            <td><button type="button" class="btn btn-outline-primary mr-2">
+              <i class="fas fa-edit"></i> Güncelle
+            </button>
+            <button type="button" class="btn btn-danger mx-2">
+              <i class="fas fa-trash-alt"></i> Sil
+            </button>
+            </td>
+          </tr>
+        }
+        </tbody>
+      </table>
+    </div>
+  </ul>
+</div>
+}@if (kampListesi.length === 0) {
+<div>
+  <p>Henüz başvuru bulunmamaktadır.</p>
+</div>
+}
+
+
+
